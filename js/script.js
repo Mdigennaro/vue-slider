@@ -13,6 +13,10 @@ const app = new Vue({
     counter: 0
   },
 
+  mounted(){
+    setInterval(this.nextSlides, 3000)
+  },
+
   methods:{
 
     nextSlides(){
@@ -29,7 +33,7 @@ const app = new Vue({
       if (this.counter < 0) {
         this.counter = this.image.length - 1;
       }
-    },
+    }
 
 
   }
